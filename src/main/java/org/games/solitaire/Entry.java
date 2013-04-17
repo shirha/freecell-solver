@@ -56,14 +56,6 @@ public class Entry {
 	public String key;
 	public Value value;
 
-	public Entry (String[] line){
-		this.key = line[0];
-		this.value = new Value();
-
-		for (int i = 1; i < line.length; i++) 
-			value.token[i - 1] = Integer.parseInt(line[i]);
-	}
-
 	public Entry (String key, Value value){
 		this.key = key;
 		this.value = value;

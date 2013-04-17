@@ -360,9 +360,6 @@ public class Tableau {
 							break;
 						maxIndex++;
 					}
-//					Entry e = new Entry(this); // #325; 40 63 9C-8H empty column
-//					if (e.key.equals("EVgv} F]l[jYh L M\\KZIXG W m|kzix {JyHw"))
-//						System.out.println("c="+ c +", mcount="+ maxCount +", mindex="+ maxIndex);
 					maxIndex = Math.min(maxIndex, maxCount) - 1;
 				}
 				for (int k = h.z[c]; k > 1; k--){ // don't move whole column to empty
@@ -371,8 +368,6 @@ public class Tableau {
 
 //					if ((winxpopt ? 1 : h.ecount) * (h.fcount + 1) > h.z[c] - k ) {
 					if ( (winxpopt ? (h.z[c] == k || maxIndex == h.z[c] - k) : (maxCount > h.z[c] - k )) ) {
-//						if (e.key.equals("EVgv} F]l[jYh L M\\KZIXG W m|kzix {JyHw"))
-//							System.out.println("k="+ k +", "+ (h.z[c] - k) +", "+ (maxIndex == h.z[c] - k) +", "+ (maxCount > h.z[c] - k));
 						node = new ArrayList<Move>();  								// e*(f+1)
 						for (int x = k, y = 1; x <= h.z[c]; ){
 							node.add(new Move(c, x++, h.eindex, y++, "ce"));								

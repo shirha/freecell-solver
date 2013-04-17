@@ -41,8 +41,6 @@
 
 package org.games.solitaire;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,7 +49,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.TreeMap;
 
 import com.beust.jcommander.JCommander;
@@ -90,19 +87,18 @@ public class Solver {
 	private int MAXSTATS;
 	private Stats stats;
 	private Logger logger;
-	private Map<String, String> set;
 	
 //		#617 with 5 moves left (Xp invalid!)
-//	String input = 
-//		"KS 7C 9S 6S 5D 4C 5H 4S \r\n" + 
-//		"7D 9C 5C KC 5S 8C KH 7S \r\n" + 
-//		"TD    QD QH 6D 8H QC    \r\n" + 
-//		"TH    JC JS    8D JD    \r\n" + 
-//		"KD             7H TC    \r\n" + 
-//		"QS             6H 9D    \r\n" + 
-//		"JH             6C 8S    \r\n" + 
-//		"TS                      \r\n" + 
-//		"9H                      \r\n";
+	String input2 = 
+		"KS 7C 9S 6S 5D 4C 5H 4S \r\n" + 
+		"7D 9C 5C KC 5S 8C KH 7S \r\n" + 
+		"TD    QD QH 6D 8H QC    \r\n" + 
+		"TH    JC JS    8D JD    \r\n" + 
+		"KD             7H TC    \r\n" + 
+		"QS             6H 9D    \r\n" + 
+		"JH             6C 8S    \r\n" + 
+		"TS                      \r\n" + 
+		"9H                      \r\n";
 
 //		#325 with 2 moves left --winxp
 	String input =
@@ -118,7 +114,6 @@ public class Solver {
 //TODO	Add winxp warn –or- win7 all
 	
 	public static void main(String[] args) {
-//		new Solver().debug(); System.exit(1);
 		Solver solver = new Solver();
 		new JCommander(solver, args);
 		try {
@@ -138,13 +133,6 @@ public class Solver {
 				"       -Xmx6g is 6G heapsize;\n");
 			System.exit(1);
 		}
-//		load();
-//TODO debug #38 has a shorter solution if using heuristic 1 or 2 but not both		
-//		for (Map.Entry<String, String> s: set.entrySet()){
-//				System.out.println(s.getValue() +","+ s.getKey());
-//			}
-//		System.out.println(set);
-//		System.exit(1);
 
 		while(true){
 			position  = new HashMap<String, Entry.Value>();
@@ -216,22 +204,9 @@ public class Solver {
 	
 				stats = new Stats(MAXSTATS);
 				nextstack = new ArrayList<Entry>();
-//TODO debug #38			
-//				int numberOfKeys = 0;
-//				for (Map.Entry<String, String> s: set.entrySet())
-//					if (position.containsKey(s.getKey())){
-//						numberOfKeys++;
-//						System.out.println(s.getValue() +","+ s.getKey());
-//					}
-//				System.out.println(numberOfKeys);
 				
 				// generate all possible moves for entries in the stack
 				for (Entry entry : stack){
-//TODO	debug #38					
-// 					if (set.containsKey(entry.key) 
-//					&& Integer.parseInt(set.get(entry.key)) == depth 
-//						) System.out.println(set.get(entry.key) +","+ entry.key);
-
 					tableau = new Tableau();
 					tableau.fromToken(entry);
 					search(tableau);
@@ -263,8 +238,8 @@ public class Solver {
 					System.out.println(s);
 				System.out.println();
 
-				FileWriter upload = new FileWriter(String.format("upload%03d.txt", gameno / 500), true);
-//				FileWriter upload = new FileWriter(String.format("upload%03d.txt", 0           ), true);
+//				FileWriter upload = new FileWriter(String.format("upload%03d.txt", gameno / 500), true);
+				FileWriter upload = new FileWriter(String.format("upload%03d.txt", 0           ), true);
 				upload.write(
 					String.format("%s,%s,%s,%s,%s\r\n", gameno, depth, maxnodes / 1000, winxp ? "xp" : "w7", 
 						Joiner.on('~').join(solution.toArray())	));
@@ -331,54 +306,6 @@ public class Solver {
 					+ ", depth=" + entry.value.depth
 					+ ", scores=" + Arrays.toString(entry.value.score) +",");
 			}
-		}
-	}
-	
-	public void load () { 
-		set = new TreeMap<String, String>();
-		File file = new File("keys.txt");
-		try {
-			Scanner in = new Scanner(file);
-			while (in.hasNext()) {
-				String line = in.nextLine();
-				set.put(line.substring(2,line.length()), line.substring(0,2));
-			}
-			in.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public void debug () {
-		File file = new File("backtrack.txt");
-		try {
-			Scanner in = new Scanner(file);
-			while (in.hasNext()) {
-				String line = in.nextLine();
-				if (!line.startsWith("'")) continue;
-				String[] param = line.split(",");
-				param[0] = param[0].substring(1,param[0].length()-1);
-				Entry entry = new Entry(param);
-				Tableau tableau = new Tableau();
-				tableau.fromToken(entry);
-				int z[] = new int[8];
-				for (int c = 0; c < 8; c++){
-					for (int r = 1; r < 21; r++){
-						if (tableau.tableau[c][r] == 0)
-							break;
-						z[c] = r;
-					}
-				}
-				System.out.println(line);
-				System.out.println(Arrays.toString(z) +"\n"+ tableau +"\n");
-				ArrayList<ArrayList<Move>> nodelist = tableau.generateNodelist2(winxp);
-				for (ArrayList<Move> node : nodelist){
-					System.out.println(node);
-				}
-			}
-			in.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		}
 	}
 }
