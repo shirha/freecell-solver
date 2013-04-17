@@ -238,8 +238,8 @@ public class Solver {
 					System.out.println(s);
 				System.out.println();
 
-//				FileWriter upload = new FileWriter(String.format("upload%03d.txt", gameno / 500), true);
-				FileWriter upload = new FileWriter(String.format("upload%03d.txt", 0           ), true);
+				FileWriter upload = new FileWriter(String.format("upload%03d.txt", gameno / 500), true);
+//				FileWriter upload = new FileWriter(String.format("upload%03d.txt", 0           ), true);
 				upload.write(
 					String.format("%s,%s,%s,%s,%s\r\n", gameno, depth, maxnodes / 1000, winxp ? "xp" : "w7", 
 						Joiner.on('~').join(solution.toArray())	));
