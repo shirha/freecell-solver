@@ -1,0 +1,474 @@
+'GIX]ilx J K{ LHy M \ kZ m}[Y |zj',4,0,5,3,6,2,7,5,2,4,7,3,6,1,0,0
+[3,4,2,1,3,1,2,1]
+9D    QH KC 7D 8C 9H 8S
+QS KH JD QC QD TD JH KD
+TS KS JS    8D    TC
+TH JC       9S
+   9C
+
+[[0,0,6,2,'fc']]
+[[0,3,6,-1,'ch']]
+[[0,3,1,-1,'cf']]
+[[0,3,2,2,'cc']]
+[[1,4,5,-1,'ch']]
+[[1,4,1,-1,'cf']]
+[[1,4,0,3,'cc']]
+[[1,4,5,1,'cc']]
+[[2,2,1,-1,'cf']]
+[[3,1,1,-1,'cf']]
+[[3,1,7,1,'cc']]
+[[4,3,7,-1,'ch']]
+[[4,3,1,-1,'cf']]
+[[4,3,0,3,'cc']]
+[[4,3,5,1,'cc']]
+[[5,1,1,-1,'cf']]
+[[5,1,2,2,'cc']]
+[[6,2,1,-1,'cf']]
+[[6,1,3,1,'scc'],[6,2,3,2,'scc']]
+[[7,1,1,-1,'cf']]
+'DFIU]els Jt\ K{ LHy MWgV kZixGvE m}[Yh |zjXwfu',4,1,0,5,3,6,2,7,5,2,4,7,6,1,0,0
+[7,5,2,0,3,3,7,4]
+9D 6D QH KC 4D 5C 5H 3S
+QS KH JD    QD TD JH KD
+TS KS JS    8D 4S TC 7C
+TH JC       9S QC 9H 7H
+8C 9C             8S 6C
+7S 8H             7D
+6H                6S
+5S                5D
+
+[[0,0,3,0,'fe']]
+[[1,0,3,0,'fe']]
+[[2,0,3,0,'fe']]
+[[3,0,3,0,'fe']]
+[[0,7,3,0,'ce']]
+[[1,5,3,0,'ce']]
+[[1,5,4,3,'cc']]
+[[2,2,3,0,'ce']]
+[[4,3,3,0,'ce']]
+[[5,3,3,0,'ce']]
+[[6,7,4,-1,'ch']]
+[[6,7,3,0,'ce']]
+[[6,7,7,4,'cc']]
+[[7,4,5,-1,'ch']]
+[[7,4,3,0,'ce']]
+'DFIU]els Jt\ K{ LHy MWgV h kZixGvE m}[Y |zjXwfu',4,1,0,5,3,6,2,7,5,2,4,7,3,6,1,0
+[7,4,2,1,3,3,7,4]
+9D 6D QH KC 4D 5C 5H 3S
+QS KH JD 8H QD TD JH KD
+TS KS JS    8D 4S TC 7C
+TH JC       9S QC 9H 7H
+8C 9C             8S 6C
+7S                7D
+6H                6S
+5S                5D
+
+[[3,1,1,4,'cc']]
+[[3,1,4,3,'cc']]
+[[6,7,4,-1,'ch']]
+[[6,7,7,4,'cc']]
+[[7,4,5,-1,'ch']]
+'CFIRels Jt\ K{US] LHy MWgV h kZixGvET m}[Y |zjXwfuD',4,1,0,5,6,2,7,5,2,4,7,3,6,1,0,0
+[8,4,5,1,3,3,8,4]
+9D 6D QH    3D 2C 5H 3S
+QS KH JD 8H QD TD JH KD
+TS KS JS    8D 4S TC 7C
+TH JC 5C    9S QC 9H 7H
+8C 9C 3C          8S 6C
+7S    KC          7D
+6H                6S
+5S                5D
+4D                4C
+
+[[2,0,2,5,'fc']]
+[[0,8,4,-1,'ch']]
+[[0,8,3,-1,'cf']]
+[[1,4,3,-1,'cf']]
+[[2,5,3,-1,'cf']]
+[[3,1,3,-1,'cf']]
+[[3,1,1,4,'cc']]
+[[3,1,4,3,'cc']]
+[[4,3,3,-1,'cf']]
+[[5,3,3,-1,'cf']]
+[[6,8,3,-1,'cf']]
+[[6,7,7,4,'scc'],[6,8,7,5,'scc']]
+[[7,4,3,-1,'cf']]
+'AFIRer Jt\ K{US]Bl LHy MWgVs h kZixGvETC m}[Y |zjXwfuD',4,1,0,5,6,7,5,2,4,7,3,6,1,0,0,0
+[8,4,7,1,3,3,9,5]
+9D 6D       AD 2C 5H 2S
+QS KH JD 8H QD TD JH KD
+TS KS JS    8D 4S TC 7C
+TH JC 5C    9S QC 9H 7H
+8C 9C 3C          8S 6C
+7S    KC          7D 3S
+6H    2D          6S
+5S    QH          5D
+4D                4C
+                  3D
+
+[[0,8,2,-1,'cf']]
+[[1,4,2,-1,'cf']]
+[[2,7,2,-1,'cf']]
+[[3,1,2,-1,'cf']]
+[[3,1,1,4,'cc']]
+[[3,1,4,3,'cc']]
+[[4,3,2,-1,'cf']]
+[[5,3,2,-1,'cf']]
+[[6,9,2,-1,'cf']]
+[[7,5,7,-1,'ch']]
+[[7,5,2,-1,'cf']]
+[[7,5,0,8,'cc']]
+'AFIRer Jt\fuD K{US]Bl LHy MWgVs h kZixGvETC m}[Y |zjXw',4,1,0,5,6,7,5,2,4,7,3,6,1,0,0,0
+[5,4,7,1,3,6,9,5]
+9D 6D       AD 2C 5H 2S
+QS KH JD 8H QD TD JH KD
+TS KS JS    8D 4S TC 7C
+TH JC 5C    9S QC 9H 7H
+8C 9C 3C       6H 8S 6C
+7S    KC       5S 7D 3S
+      2D       4D 6S
+      QH          5D
+                  4C
+                  3D
+
+[[1,0,0,5,'fc']]
+[[0,5,2,-1,'cf']]
+[[0,5,3,1,'cc']]
+[[1,4,2,-1,'cf']]
+[[2,7,2,-1,'cf']]
+[[3,1,2,-1,'cf']]
+[[3,1,1,4,'cc']]
+[[3,1,4,3,'cc']]
+[[4,3,2,-1,'cf']]
+[[5,6,2,-1,'cf']]
+[[5,4,0,5,'scc'],[5,5,0,6,'scc'],[5,6,0,7,'scc']]
+[[6,9,2,-1,'cf']]
+[[7,5,7,-1,'ch']]
+[[7,5,2,-1,'cf']]
+[[7,5,5,6,'cc']]
+'FIRer Jt\fu K{US]Bl LHy MWgVs hAD kZixGvETC m}[Y |zjXw',1,0,5,6,7,5,2,4,7,3,6,1,0,0,0,0
+[5,4,7,3,3,5,9,5]
+9D 6D          2C 5H 2S
+QS KH JD 8H QD TD JH KD
+TS KS JS AD 8D 4S TC 7C
+TH JC 5C 4D 9S QC 9H 7H
+8C 9C 3C       6H 8S 6C
+7S    KC       5S 7D 3S
+      2D          6S
+      QH          5D
+                  4C
+                  3D
+
+[[1,0,0,5,'fc']]
+[[0,5,2,-1,'cf']]
+[[1,4,2,-1,'cf']]
+[[2,7,2,-1,'cf']]
+[[3,3,2,-1,'cf']]
+[[3,3,5,5,'cc']]
+[[4,3,2,-1,'cf']]
+[[5,5,2,-1,'cf']]
+[[5,4,0,5,'scc'],[5,5,0,6,'scc']]
+[[6,9,2,-1,'cf']]
+[[7,5,7,-1,'ch']]
+[[7,5,2,-1,'cf']]
+[[7,5,3,3,'cc']]
+'FIRdr Jt\fu K{US]Bl LHy MWgVs hADe kZixGvETC m}[Y |zjXw',1,0,5,6,7,5,2,4,7,3,6,1,0,0,0,0
+[5,4,7,4,3,5,9,5]
+9D 6D          2C 4H 2S
+QS KH JD 8H QD TD JH KD
+TS KS JS AD 8D 4S TC 7C
+TH JC 5C 4D 9S QC 9H 7H
+8C 9C 3C 5H    6H 8S 6C
+7S    KC       5S 7D 3S
+      2D          6S
+      QH          5D
+                  4C
+                  3D
+
+[[1,0,0,5,'fc']]
+[[0,5,2,-1,'cf']]
+[[1,4,2,-1,'cf']]
+[[2,7,2,-1,'cf']]
+[[3,4,6,-1,'ch']]
+[[3,4,2,-1,'cf']]
+[[4,3,2,-1,'cf']]
+[[5,5,2,-1,'cf']]
+[[5,4,0,5,'scc'],[5,5,0,6,'scc']]
+[[6,9,2,-1,'cf']]
+[[6,8,3,4,'scc'],[6,9,3,5,'scc']]
+[[7,5,7,-1,'ch']]
+[[7,5,2,-1,'cf']]
+'FIRcr Jt\fu K{US]Bl LHy MWgVs hADed kZixGvETC m}[Y |zjXw',1,0,5,6,7,5,2,4,7,3,6,1,0,0,0,0
+[5,4,7,5,3,5,9,5]
+9D 6D          2C 3H 2S
+QS KH JD 8H QD TD JH KD
+TS KS JS AD 8D 4S TC 7C
+TH JC 5C 4D 9S QC 9H 7H
+8C 9C 3C 5H    6H 8S 6C
+7S    KC 4H    5S 7D 3S
+      2D          6S
+      QH          5D
+                  4C
+                  3D
+
+[[1,0,0,5,'fc']]
+[[0,5,2,-1,'cf']]
+[[1,4,2,-1,'cf']]
+[[2,7,2,-1,'cf']]
+[[3,5,6,-1,'ch']]
+[[3,5,2,-1,'cf']]
+[[3,5,5,5,'cc']]
+[[4,3,2,-1,'cf']]
+[[5,5,2,-1,'cf']]
+[[5,4,0,5,'scc'],[5,5,0,6,'scc']]
+[[6,9,2,-1,'cf']]
+[[7,5,7,-1,'ch']]
+[[7,5,2,-1,'cf']]
+[[7,5,3,5,'cc']]
+'FIRcr Jt\f K{US]Bl LHy MWgVs hADedu kZixGvETC m}[Y |zjXw',1,0,5,6,7,5,2,4,7,3,6,1,0,0,0,0
+[5,4,7,6,3,4,9,5]
+9D 6D          2C 3H 2S
+QS KH JD 8H QD TD JH KD
+TS KS JS AD 8D 4S TC 7C
+TH JC 5C 4D 9S QC 9H 7H
+8C 9C 3C 5H    6H 8S 6C
+7S    KC 4H       7D 3S
+      2D 5S       6S
+      QH          5D
+                  4C
+                  3D
+
+[[1,0,0,5,'fc']]
+[[0,5,2,-1,'cf']]
+[[1,4,2,-1,'cf']]
+[[2,7,2,-1,'cf']]
+[[3,6,2,-1,'cf']]
+[[3,6,5,4,'cc']]
+[[4,3,2,-1,'cf']]
+[[5,4,2,-1,'cf']]
+[[5,4,0,5,'cc']]
+[[6,9,2,-1,'cf']]
+[[7,5,7,-1,'ch']]
+[[7,5,2,-1,'cf']]
+'IRbr Jt\f K{US]Bl LHy MWgVs hADedu kZixGvETC m}[Y |zjXwcF',0,5,6,7,5,2,4,7,3,6,1,0,0,0,0,0
+[7,4,7,6,3,4,9,5]
+9D             2C 2H 2S
+QS KH JD 8H QD TD JH KD
+TS KS JS AD 8D 4S TC 7C
+TH JC 5C 4D 9S QC 9H 7H
+8C 9C 3C 5H    6H 8S 6C
+7S    KC 4H       7D 3S
+3H    2D 5S       6S
+6D    QH          5D
+                  4C
+                  3D
+
+[[0,7,1,-1,'cf']]
+[[1,4,1,-1,'cf']]
+[[2,7,1,-1,'cf']]
+[[3,6,1,-1,'cf']]
+[[3,6,0,7,'cc']]
+[[3,6,5,4,'cc']]
+[[4,3,1,-1,'cf']]
+[[5,4,1,-1,'cf']]
+[[6,9,1,-1,'cf']]
+[[7,5,7,-1,'ch']]
+[[7,5,1,-1,'cf']]
+'IRbq Jt\frvETC K{US]Bl LHy MWgVs hADedu kZixG m}[Y |zjXwcF',0,5,6,7,5,2,4,7,3,6,1,0,0,0,0,0
+[7,4,7,6,3,9,5,5]
+9D             2C 2H AS
+QS KH JD 8H QD TD JH KD
+TS KS JS AD 8D 4S TC 7C
+TH JC 5C 4D 9S QC 9H 7H
+8C 9C 3C 5H    6H 8S 6C
+7S    KC 4H    2S 7D 3S
+3H    2D 5S    6S
+6D    QH       5D
+               4C
+               3D
+
+[[0,7,1,-1,'cf']]
+[[1,4,1,-1,'cf']]
+[[2,7,1,-1,'cf']]
+[[3,6,1,-1,'cf']]
+[[3,6,0,7,'cc']]
+[[4,3,1,-1,'cf']]
+[[5,9,1,-1,'cf']]
+[[5,6,6,5,'scc'],[5,7,6,6,'scc'],[5,8,6,7,'scc'],[5,9,6,8,'scc']]
+[[6,5,1,-1,'cf']]
+[[7,5,1,-1,'cf']]
+'IRaq Jt\frvETC K{US]Bl LHybG MWgVs hADedu kZix m}[Y |zjXwcF',0,5,6,7,5,2,4,7,3,6,1,0,0,0,0,0
+[7,4,7,6,5,9,4,5]
+9D             2C AH AS
+QS KH JD 8H QD TD JH KD
+TS KS JS AD 8D 4S TC 7C
+TH JC 5C 4D 9S QC 9H 7H
+8C 9C 3C 5H 2H 6H 8S 6C
+7S    KC 4H 7D 2S    3S
+3H    2D 5S    6S
+6D    QH       5D
+               4C
+               3D
+
+[[0,7,1,-1,'cf']]
+[[1,4,1,-1,'cf']]
+[[2,7,1,-1,'cf']]
+[[3,6,1,-1,'cf']]
+[[3,6,0,7,'cc']]
+[[4,5,1,-1,'cf']]
+[[4,5,6,4,'cc']]
+[[5,9,1,-1,'cf']]
+[[5,6,4,5,'scc'],[5,7,4,6,'scc'],[5,8,4,7,'scc'],[5,9,4,8,'scc']]
+[[6,4,1,-1,'cf']]
+[[7,5,1,-1,'cf']]
+'Raq Jt\frvETC K{US]Bl LHybGI MWgVs hADedu kZix m}[Y |zjXwcF',5,6,7,5,2,4,7,3,6,1,0,0,0,0,0,0
+[7,4,7,6,6,9,4,5]
+               2C AH AS
+QS KH JD 8H QD TD JH KD
+TS KS JS AD 8D 4S TC 7C
+TH JC 5C 4D 9S QC 9H 7H
+8C 9C 3C 5H 2H 6H 8S 6C
+7S    KC 4H 7D 2S    3S
+3H    2D 5S 9D 6S
+6D    QH       5D
+               4C
+               3D
+
+[[0,7,0,-1,'cf']]
+[[1,4,0,-1,'cf']]
+[[2,7,0,-1,'cf']]
+[[3,6,0,-1,'cf']]
+[[3,6,0,7,'cc']]
+[[4,6,0,-1,'cf']]
+[[5,9,0,-1,'cf']]
+[[6,4,0,-1,'cf']]
+[[6,4,4,6,'cc']]
+[[7,5,0,-1,'cf']]
+'Rq Jt\frvETC K{US]Bl LHybGI MWgVs hADedu m}[YakZix |zjXwcF',5,7,5,2,4,7,3,1,0,0,0,0,0,0,0,0
+[7,9,7,6,6,9,0,5]
+               2C    AS
+QS KH JD 8H QD TD    KD
+TS KS JS AD 8D 4S    7C
+TH JC 5C 4D 9S QC    7H
+8C 9C 3C 5H 2H 6H    6C
+7S AH KC 4H 7D 2S    3S
+3H JH 2D 5S 9D 6S
+6D TC QH       5D
+   9H          4C
+   8S          3D
+
+[[0,7,0,-1,'cf']]
+[[0,7,6,0,'ce']]
+[[1,9,0,-1,'cf']]
+[[1,9,6,0,'ce']]
+[[1,8,6,0,'sce'],[1,9,6,1,'sce']]
+[[1,7,6,0,'sce'],[1,8,6,1,'sce'],[1,9,6,2,'sce']]
+[[1,6,6,0,'sce'],[1,7,6,1,'sce'],[1,8,6,2,'sce'],[1,9,6,3,'sce']]
+[[1,9,4,6,'cc']]
+[[2,7,0,-1,'cf']]
+[[2,7,6,0,'ce']]
+[[3,6,0,-1,'cf']]
+[[3,6,6,0,'ce']]
+[[3,6,0,7,'cc']]
+[[4,6,0,-1,'cf']]
+[[4,6,6,0,'ce']]
+[[5,9,0,-1,'cf']]
+[[5,9,6,0,'ce']]
+[[5,8,6,0,'sce'],[5,9,6,1,'sce']]
+[[5,7,6,0,'sce'],[5,8,6,1,'sce'],[5,9,6,2,'sce']]
+[[5,6,6,0,'sce'],[5,7,6,1,'sce'],[5,8,6,2,'sce'],[5,9,6,3,'sce']]
+[[7,5,0,-1,'cf']]
+[[7,5,6,0,'ce']]
+'Rq Jt\frvETC K{US]Bl LHybGI MWgVs hADedu m}[YakZi x |zjXwcF',5,7,5,2,4,7,3,1,6,0,0,0,0,0,0,0
+[7,8,7,6,6,9,1,5]
+               2C    AS
+QS KH JD 8H QD TD 8S KD
+TS KS JS AD 8D 4S    7C
+TH JC 5C 4D 9S QC    7H
+8C 9C 3C 5H 2H 6H    6C
+7S AH KC 4H 7D 2S    3S
+3H JH 2D 5S 9D 6S
+6D TC QH       5D
+   9H          4C
+               3D
+
+[[0,7,0,-1,'cf']]
+[[1,8,0,-1,'cf']]
+[[2,7,0,-1,'cf']]
+[[3,6,0,-1,'cf']]
+[[3,6,0,7,'cc']]
+[[4,6,0,-1,'cf']]
+[[5,9,0,-1,'cf']]
+[[6,1,0,-1,'cf']]
+[[6,1,1,8,'cc']]
+[[6,1,4,6,'cc']]
+[[7,5,0,-1,'cf']]
+'Qq Jt\frvETC K{US]Bl LHybGI MWgVs hADedu m}[Yak xRZi |zjXwcF',5,7,5,2,4,7,3,1,6,0,0,0,0,0,0,0
+[7,6,7,6,6,9,4,5]
+               AC    AS
+QS KH JD 8H QD TD 8S KD
+TS KS JS AD 8D 4S 2C 7C
+TH JC 5C 4D 9S QC TC 7H
+8C 9C 3C 5H 2H 6H 9H 6C
+7S AH KC 4H 7D 2S    3S
+3H JH 2D 5S 9D 6S
+6D    QH       5D
+               4C
+               3D
+
+[[0,7,0,-1,'cf']]
+[[1,6,0,-1,'cf']]
+[[2,7,0,-1,'cf']]
+[[3,6,0,-1,'cf']]
+[[3,6,0,7,'cc']]
+[[4,6,0,-1,'cf']]
+[[5,9,0,-1,'cf']]
+[[6,4,0,-1,'cf']]
+[[6,3,1,6,'scc'],[6,4,1,7,'scc']]
+[[7,5,0,-1,'cf']]
+'Qq Jt\frv K{US]Bl LHybGI MWgVs hADedu m}[YakETC xRZi |zjXwcF',5,7,5,2,4,7,3,1,6,0,0,0,0,0,0,0
+[7,9,7,6,6,6,4,5]
+               AC    AS
+QS KH JD 8H QD TD 8S KD
+TS KS JS AD 8D 4S 2C 7C
+TH JC 5C 4D 9S QC TC 7H
+8C 9C 3C 5H 2H 6H 9H 6C
+7S AH KC 4H 7D 2S    3S
+3H JH 2D 5S 9D 6S
+6D 5D QH
+   4C
+   3D
+
+[[0,7,0,-1,'cf']]
+[[1,9,0,-1,'cf']]
+[[1,7,5,6,'scc'],[1,8,5,7,'scc'],[1,9,5,8,'scc']]
+[[2,7,0,-1,'cf']]
+[[3,6,0,-1,'cf']]
+[[3,6,0,7,'cc']]
+[[4,6,0,-1,'cf']]
+[[5,6,0,-1,'cf']]
+[[6,4,0,-1,'cf']]
+[[7,5,0,-1,'cf']]
+' Jt\frv K{US]Bl LHybGI MWgVsq hADeduQ m}[YakE xRZiTC |zjXwcF',5,2,4,7,3,1,6,0,0,0,0,0,0,0,0,0
+[7,7,7,7,6,6,6,6]
+
+QS KH JD 8H QD TD 8S KD
+TS KS JS AD 8D 4S 2C 7C
+TH JC 5C 4D 9S QC TC 7H
+8C 9C 3C 5H 2H 6H 9H 6C
+7S AH KC 4H 7D 2S 4C 3S
+3H JH 2D 5S 9D 6S 3D AS
+6D 5D QH AC
+
+[[0,7,0,-1,'cf']]
+[[1,7,0,-1,'cf']]
+[[1,7,5,6,'cc']]
+[[2,7,0,-1,'cf']]
+[[3,7,5,-1,'ch']]
+[[3,7,0,-1,'cf']]
+[[4,6,0,-1,'cf']]
+[[5,6,0,-1,'cf']]
+[[6,6,0,-1,'cf']]
+[[6,5,1,7,'scc'],[6,6,1,8,'scc']]
+[[7,6,7,-1,'ch']]
+[[7,6,0,-1,'cf']]
