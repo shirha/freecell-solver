@@ -386,7 +386,8 @@ public class Tableau {
 						break;
 
 					if (inSequence(tableau[c][k], tableau[j][h.z[j]]) 
-					&& ((winxpopt ? Math.min(1, h.ecount) : h.ecount) + 1) * (h.fcount + 1) > h.z[c] - k){
+				//	&& ((winxpopt ? Math.min(1, h.ecount) : h.ecount) + 1) * (h.fcount + 1) > h.z[c] - k){
+					&& (                                    h.ecount  + 1) * (h.fcount + 1) > h.z[c] - k){
 						node = new ArrayList<Move>(); 								// (e+1)*(f+1)
 						for (int x = k, y = h.z[j] + 1; x <= h.z[c]; ){
 							node.add(new Move(c, x++, j, y++, "cc"));							
