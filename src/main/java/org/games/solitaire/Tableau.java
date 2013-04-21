@@ -55,9 +55,11 @@ import com.google.common.collect.Iterables;
 
 
 public class Tableau {
-	
+
 	int[][] tableau;
-	
+
+	public static boolean winxpwarn; // set in notation(), see Solver.backtrack()
+		
 	private static final int MAXCOLS = 8;
 	private static final int MAXROWS = 21;
 	private static final int HOMEOFFSET = 4;
@@ -297,6 +299,7 @@ public class Tableau {
 	}
 
 	public ArrayList<ArrayList<Move>> generateNodelist2 (boolean winxpopt){
+		
 		ArrayList<ArrayList<Move>> nodelist = new ArrayList<ArrayList<Move>>();
 		ArrayList<Move> node;
 		
@@ -366,7 +369,6 @@ public class Tableau {
 					if (!( h.z[c] == k || inSequence(tableau[c][k + 1], tableau[c][k]) ))
 						break;
 
-//					if ((winxpopt ? 1 : h.ecount) * (h.fcount + 1) > h.z[c] - k ) {
 					if ( (winxpopt ? (h.z[c] == k || maxIndex == h.z[c] - k) : (maxCount > h.z[c] - k )) ) {
 						node = new ArrayList<Move>();  								// e*(f+1)
 						for (int x = k, y = 1; x <= h.z[c]; ){
@@ -386,8 +388,7 @@ public class Tableau {
 						break;
 
 					if (inSequence(tableau[c][k], tableau[j][h.z[j]]) 
-				//	&& ((winxpopt ? Math.min(1, h.ecount) : h.ecount) + 1) * (h.fcount + 1) > h.z[c] - k){
-					&& (                                    h.ecount  + 1) * (h.fcount + 1) > h.z[c] - k){
+					&& (h.ecount  + 1) * (h.fcount + 1) > h.z[c] - k){
 						node = new ArrayList<Move>(); 								// (e+1)*(f+1)
 						for (int x = k, y = h.z[j] + 1; x <= h.z[c]; ){
 							node.add(new Move(c, x++, j, y++, "cc"));							
@@ -401,7 +402,8 @@ public class Tableau {
 		return nodelist;
 	}
 	
-	public String notation (Entry entry){
+	public String notation (Entry entry, boolean winxpopt){
+
 		List<String> result = new ArrayList<String>();
 		Tableau note = new Tableau();
 
@@ -453,12 +455,26 @@ public class Tableau {
 			}
 			note.play(move);
 		}
+
+		if (!winxpopt && dscDst.equals("e") && dscSrc.size() > 1){
+			Helper h = new Helper(tableau);
+			int c = entry.value.node.get(0).srcCol;
+			int maxIndex = 0;
+			for (int k = h.z[c]; k > 0; k--) { // using tableau here, not note! backtrack() already did undo() 
+				if (!( h.z[c] == k || inSequence(tableau[c][k + 1], tableau[c][k]) ))
+					break;
+				maxIndex++;
+			}
+			maxIndex = Math.min(maxIndex, h.fcount + 1);
+			winxpwarn |= maxIndex != dscSrc.size();
+//			System.out.println("depth="+ entry.value.depth +", warn="+ (maxIndex != dscSrc.size()));
+		}
+
 		for (Map.Entry<Integer, ArrayList<String>> suitArray : autoPlay.entrySet()){
 			ArrayList<String> cardArray = suitArray.getValue();
 			autoSrc.add(cardArray.get(0) + (cardArray.size() > 1 ?
 				"-" + Iterables.getLast(cardArray) : ""));
 		}
-		
 		result.add(Integer.toString(entry.value.depth));
 		result.add(stdSrc + stdDst);
 		result.add(dscSrc.get(0) + (dscSrc.size() > 1 ?

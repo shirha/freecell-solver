@@ -111,8 +111,6 @@ public class Solver {
 		"8S             9C    8C \r\n" + 
 		"               8H    7D \r\n"; 
 	
-//TODO	Add winxp warn –or- win7 all
-	
 	public static void main(String[] args) {
 		Solver solver = new Solver();
 		new JCommander(solver, args);
@@ -231,21 +229,17 @@ public class Solver {
 				Collections.reverse(solutionScores);
 				for (int[] ss : solutionScores)
 					sb.append(Arrays.toString(ss));
-				logger.log("scores="+ sb.toString());
-
 				Collections.reverse(solution);
-				for (String s : solution)
-					System.out.println(s);
-				System.out.println();
+				String caption = String.format("%s,%s,%s,%s,", gameno, depth, maxnodes / 1000, 
+					winxp ? "xp" : Tableau.winxpwarn ? "w7" : "all");
+				logger.log("scores="+ sb.toString() + "\r\n"+ caption +"\r\n"+ Joiner.on("\r\n").join(solution.toArray()));
 
 				FileWriter upload = null;
 				if (blocksolve == 1)
 					upload = new FileWriter(              "upload.txt"                   , true);
 				else
 					upload = new FileWriter(String.format("upload%03d.txt", gameno / 500), true);
-				upload.write(
-					String.format("%s,%s,%s,%s,%s\r\n", gameno, depth, maxnodes / 1000, winxp ? "xp" : "w7", 
-						Joiner.on('~').join(solution.toArray())	));
+				upload.write(caption + Joiner.on('~').join(solution.toArray())	+"\r\n");
 				upload.close();
 			}
 			logger.close();
@@ -287,13 +281,15 @@ public class Solver {
 
 	public void backtrack (Entry entry){
 		solutionScores = new ArrayList<int[]>();
+		
+		Tableau.winxpwarn = false; // set in Tableau.notation(), used in upload.write
 		while (true) {
 			if (entry.value.depth == 0)
 				break;
 			Tableau tableau = new Tableau();
 			tableau.fromToken(entry);
 			tableau.undo(entry.value.node);
-			solution.add(tableau.notation(entry));
+			solution.add(tableau.notation(entry, winxp));
 			
 			if (showall)
 				logger.log("node="+ entry.value.node +"\r\n"+
