@@ -18,3 +18,5 @@ $(JAVA_BINS): bin/%.class: src/main/java/%.java
 
 .PHONY: java_bins
 
+clean:
+	rm -f $(JAVA_BINS)
