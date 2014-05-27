@@ -9,7 +9,7 @@ Please use the following options:
 
  	-d64 is 64bit;
  	-Xmx6g is 6G heapsize;
-	--winxp solves specifically for Windows XP (but also works in Vista, 7);
+	--winxp solves specifically for Windows XP (but also works in Vista, 7, 8);
         ( default is --nowinxp (may not work in XP) )
 	--maxnodes 2000 is default
         ; 20000 needs -d64 -Xmx4g
@@ -27,3 +27,4 @@ Note. This is a straight-forward conversion of my Perl program
 Freecell-App-0.03 on the CPAN ( https://metacpan.org/release/Freecell-App ).
 The Java version runs 70 times faster than the Perl one!
 
+Here's the jar http://www.4shared.com/zip/w51beM5yce/fcsolver.html
