@@ -27,4 +27,4 @@ Note. This is a straight-forward conversion of my Perl program
 Freecell-App-0.03 on the CPAN ( https://metacpan.org/release/Freecell-App ).
 The Java version runs 70 times faster than the Perl one!
 
-Here's the jar http://www.4shared.com/zip/w51beM5yce/fcsolver.html
+Here's the jar http://www.4shared.com/zip/w51beM5yce/Freecell_Solver.html
