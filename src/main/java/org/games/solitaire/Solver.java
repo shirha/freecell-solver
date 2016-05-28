@@ -66,13 +66,13 @@ public class Solver {
 
 	@Parameter(names = "--blocksolve", description = "Generate blocksize solutions")
 	private int blocksolve = 1;
-	
+
 	@Parameter(names = "--winxp", description = "Solve for Windows XP")
 	private boolean winxp = false;
-	
+
 	@Parameter(names = "--showall", description = "Debug mode")
 	private boolean showall = false;
-	
+
 	private Map<String, Entry.Value> position;
 	private List<int[]> solutionScores;
 	private List<String> solution;
@@ -87,30 +87,30 @@ public class Solver {
 	private int MAXSTATS;
 	private Stats stats;
 	private Logger logger;
-	
+
 //		#617 with 5 moves left (Xp invalid!)
-	String input2 = 
-		"KS 7C 9S 6S 5D 4C 5H 4S \r\n" + 
-		"7D 9C 5C KC 5S 8C KH 7S \r\n" + 
-		"TD    QD QH 6D 8H QC    \r\n" + 
-		"TH    JC JS    8D JD    \r\n" + 
-		"KD             7H TC    \r\n" + 
-		"QS             6H 9D    \r\n" + 
-		"JH             6C 8S    \r\n" + 
-		"TS                      \r\n" + 
+	String input2 =
+		"KS 7C 9S 6S 5D 4C 5H 4S \r\n" +
+		"7D 9C 5C KC 5S 8C KH 7S \r\n" +
+		"TD    QD QH 6D 8H QC    \r\n" +
+		"TH    JC JS    8D JD    \r\n" +
+		"KD             7H TC    \r\n" +
+		"QS             6H 9D    \r\n" +
+		"JH             6C 8S    \r\n" +
+		"TS                      \r\n" +
 		"9H                      \r\n";
 
 //		#325 with 2 moves left --winxp
 	String input =
-		"      KS    5D 6C 7H 6S \r\n" + 
-		"KH JS    7C    6D QD KD \r\n" + 
-		"QS TD          KC    QC \r\n" + 
-		"JH 9S          QH    JD \r\n" + 
-		"TS 8D          JC    TC \r\n" + 
-		"9H 7S          TH    9D \r\n" + 
-		"8S             9C    8C \r\n" + 
-		"               8H    7D \r\n"; 
-	
+		"      KS    5D 6C 7H 6S \r\n" +
+		"KH JS    7C    6D QD KD \r\n" +
+		"QS TD          KC    QC \r\n" +
+		"JH 9S          QH    JD \r\n" +
+		"TS 8D          JC    TC \r\n" +
+		"9H 7S          TH    9D \r\n" +
+		"8S             9C    8C \r\n" +
+		"               8H    7D \r\n";
+
 	public static void main(String[] args) {
 		Solver solver = new Solver();
 		new JCommander(solver, args);
@@ -138,13 +138,13 @@ public class Solver {
 			nextstack = new ArrayList<Entry>();
 			found     = false;
 			depth     = 0;
-	
+
 			logger = new Logger();
 			logger.log(String.format("--gameno %s --maxnodes %s %s%s%s", gameno, maxnodes,
 				winxp ? " --winxp" : " --nowinxp",
 				blocksolve > 1 ? " --blocksolve " + blocksolve : "",
 				showall ? " --showall" : ""));
-			
+
 			// create gameno tableau
 			Tableau tableau = new Tableau();
 			if (gameno > 0)
@@ -160,16 +160,16 @@ public class Solver {
 			stats.put(entre.value.score);
 			position.put(entre.key, entre.value);
 			nextstack.add(entre);
-			
+
 			while (depth < MAXDEPTH && !found){
 				cnt = 0;
 				lvl = nextstack.size();
 
-				int[] loscore = stats.findLoScores();	
-				int[] hiscore = stats.findHiScores();	
-				int[] midscore = stats.findMidScores(maxnodes);	
+				int[] loscore = stats.findLoScores();
+				int[] hiscore = stats.findHiScores();
+				int[] midscore = stats.findMidScores(maxnodes);
 				stack = new ArrayList<Entry>();
-				
+
 				for (Entry entry : nextstack){
 					if (
 						entry.value.score[0] > midscore[0]
@@ -177,7 +177,7 @@ public class Solver {
 				//		entry.value.score[2] > midscore[2]
 						) continue;
 					//TODO needs to use MAXSTATS
-					
+
 					// mark all kept entries tree
 					stack.add(entry);
 					while(true){
@@ -191,18 +191,18 @@ public class Solver {
 						entry = new Entry(tableau);
 					}
 				}
-				
+
 				// delete all unmarked entries
 				int beforesize = position.size();
 				Iterator<Map.Entry<String, Entry.Value>> p = position.entrySet().iterator();
-				while (p.hasNext()) 
+				while (p.hasNext())
 					if (p.next().getValue().level != depth)
 						p.remove();
 				int aftersize = position.size();
-	
+
 				stats = new Stats(MAXSTATS);
 				nextstack = new ArrayList<Entry>();
-				
+
 				// generate all possible moves for entries in the stack
 				for (Entry entry : stack){
 					tableau = new Tableau();
@@ -210,15 +210,15 @@ public class Solver {
 					search(tableau);
 					if (found) break;
 				}
-				
+
 				logger.log(String.format("d=%2d, l=%8d, s=%3d,%3d,%3d, %3d,%3d,%3d, %3d,%3d,%3d, p=%8d,%8d, cnt=%8d",
-					depth, lvl, 
-					loscore[0], midscore[0], hiscore[0], 
+					depth, lvl,
+					loscore[0], midscore[0], hiscore[0],
 					loscore[1], midscore[1], hiscore[1],
-					loscore[2], midscore[2], hiscore[2], 
+					loscore[2], midscore[2], hiscore[2],
 					beforesize, aftersize, cnt));
 				//TODO needs to use MAXSTATS
-				
+
 				if (showall)
 					for (TreeMap<Integer, Integer> stat : stats.get())
 						logger.log(stat.toString());
@@ -230,7 +230,7 @@ public class Solver {
 				for (int[] ss : solutionScores)
 					sb.append(Arrays.toString(ss));
 				Collections.reverse(solution);
-				String caption = String.format("%s,%s,%s,%s,", gameno, depth, maxnodes / 1000, 
+				String caption = String.format("%s,%s,%s,%s,", gameno, depth, maxnodes / 1000,
 					winxp ? "xp" : Tableau.winxpwarn ? "w7" : "all");
 				logger.log("scores="+ sb.toString() + "\r\n"+ caption +"\r\n"+ Joiner.on("\r\n").join(solution.toArray()));
 
@@ -254,7 +254,7 @@ public class Solver {
 				tableau.play(move);
 			tableau.autoplay(node);
 			Entry entry = new Entry(tableau);
-			
+
 			// store unique entries in position hash
 			if (!position.containsKey(entry.key)){
 				entry.value.depth = depth + 1;
@@ -264,7 +264,7 @@ public class Solver {
 				position.put(entry.key, entry.value);
 				nextstack.add(entry);
 			}
-			
+
 			// solution found if all kings on homecells
 			if ((tableau.tableau[4][0] & 15) == 13
 			&&	(tableau.tableau[5][0] & 15) == 13
@@ -281,7 +281,7 @@ public class Solver {
 
 	public void backtrack (Entry entry){
 		solutionScores = new ArrayList<int[]>();
-		
+
 		Tableau.winxpwarn = false; // set in Tableau.notation(), used in upload.write
 		while (true) {
 			if (entry.value.depth == 0)
@@ -290,18 +290,18 @@ public class Solver {
 			tableau.fromToken(entry);
 			tableau.undo(entry.value.node);
 			solution.add(tableau.notation(entry, winxp));
-			
+
 			if (showall)
 				logger.log("node="+ entry.value.node +"\r\n"+
 					Iterables.getLast(solution) +"\r\n"+ tableau);
-			
+
 			entry = new Entry(tableau);
 			entry.value = position.get(entry.key);
 			solutionScores.add(entry.value.score);
-			
+
 			if (showall) {
-				logger.log("Entry={key='"+ entry.key 
-					+ "', token=" + Arrays.toString(entry.value.token) 
+				logger.log("Entry={key='"+ entry.key
+					+ "', token=" + Arrays.toString(entry.value.token)
 					+ ", depth=" + entry.value.depth
 					+ ", scores=" + Arrays.toString(entry.value.score) +",");
 			}
